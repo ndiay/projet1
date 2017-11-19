@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Goo2Goo</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="css/styleG.css"> 
+        <script type="text/javascript"></script>        
+    </head>
+    <body>
+            <nav class="navbar navbar-inverse navbar-fixed-top"><!--navbar-default colore la navbar en gris et navbar-inverse inverse la coleur en noir et
+                fixed top permet de fixer la navbar au dessus meme si on fait defiler la page-->
+                    <div class="container">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <!--collapsed pour le redimensionnement et avoir les trois tirés avec le span class="icon"-->
+                        <span class="sr-only"><!--pour les mal voyant-->Toggle navigation</span>
+                          <span class="icon-bar" ></span><!--le tiré quand on redimensionne-->
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        
+                      </div>
+                      <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                          <li><a href="Louer.html">Louer</a></li>
+                        </ul>
+                      </div><!--/.nav-collapse -->
+                    </div>
+                  </nav>
+
+        <div class="main">
+            <header>
+			
+			 <div class="jumbotron">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h1 id="logo"><span class="text-color">Goo2Goo</span>
+                    </h1>
+                  </div>
+                </div>
+        		</div>
+			 </div>            
+            </header>
+
+            <div class="container">
+            <div  class="row" id="caracter">
+            	<div class="col-md-6">
+          <form id="paiement" method="POST" action="https://secure.payzen.eu/vads-payment/">
+              <fieldset>
+                    <legend><b>Informations Bancaire</b></legend>
+                    <br>
+                    <ol>
+                      <li>
+                        <form>
+                        <fieldset>
+                          <label for=Type_de_carte_bancaire><mark>Type de carte bancaire</mark></label>
+
+                          <ol>
+                            <li>
+                              <input id=visa name=type_de_carte type=radio>
+                              <label for=visa><span style="color: red"> VISA</span></label>
+                            </li>
+                  
+                            <li>
+                              <input id=mastercard name=type_de_carte type=radio>
+                              <label for=mastercard><span style="color: red">
+                              Mastercard</span></label>
+                            </li>
+
+                          </ol>
+                        </fieldset>
+                      </li>
+                      <br>
+
+                      <li>
+                        <label for=numero_de_carte><mark>Numéro de carte</mark></label>
+                        <input style="margin-left: 35px;" id="numero_de_carte" name="numero_de_carte" type="text" placeholder="entrez les 16 chiffres" number 16 required> </style>
+                      </li>
+                      <br>
+
+                      <li>
+                        <label for=securite><mark>Code sécurité</mark></label>
+                        <input style="margin-left: 51px;" id="securite" name="securite" type="text" placeholder="code à 3 chiffres" required>
+                      </li>
+                      <br>
+
+                      <li>
+                        <label for=nom_porteur><mark>Titulaire de la carte</mark></label>
+                        <input style="margin-left: 17px;" id="nom_porteur" name="nom_porteur" type="text" placeholder="nom figurant sur la carte" required>
+                      </li>
+                    </ol>
+                  </fieldset>
+
+                  <br>
+
+                  <fieldset>
+                        <input type="hidden" name="parametre1" value="valeur1" />
+                        <input type="hidden" name="parametre2" value="valeur2" />
+                        <input type="hidden" name="parametre3" value="valeur3" />
+                        <input type="hidden" name="signature" value="signature"/>
+                         <input type="submit" name="payer" value="Payer"/>
+                  </fieldset>
+                </form>
+
+
+              </form>
+                    <br><br>
+                               
+            </div>
+            <div class="col-md-6">
+            	<img src="images/argent2.jpg" style=" width: 100%;"> 
+
+				<br><br>
+              
+            </div>
+            </div>
+            </div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-xs-4">
+                            <ul>
+                                <li><a href="index.html">Acceuil</a></li>
+                                <li><a href="contact.html">Nous contacter</a></li>
+                                <li><a href="louer.html">Louer</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-xs-4">
+                        <ul>
+                            <li><a href="https://www.facebook.com" target="blank"><img src="images/facebook.png"></a></li>
+                            <li><a href="https://www.twitter.com" target="blank"><img src="images/twitter2.png"></a </li>
+                            <li><a href="https://www.linkedin.com" target="blank"><img src="images/Linker.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4">
+                <p id="f">  &copy; Copy Right | <span style="color: red"> ALL rights reserved</span></p>
+                </div>
+                </div>               
+            </footer>
+        </div>
+    </body>
+</html>
